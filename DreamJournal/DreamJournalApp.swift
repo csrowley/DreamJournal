@@ -11,7 +11,16 @@ import SwiftUI
 struct DreamJournalApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TabView{
+                ContentView()
+                    .tabItem{
+                        Label("Dreams", systemImage: "book")
+                    }
+                SettingsView()
+                    .tabItem{
+                        Label("Settings", systemImage: "gear")
+                    }
+            }
         }
     }
 }
